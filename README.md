@@ -1,12 +1,14 @@
 # Fresh Clothes
 Nuestra pagina se trata de una simple web de tienda la cual vende diferentes tipos de indumentaria.
 
-## Estructura/HTML
+### Estructura/HTML
 - Santiago Chavez
 - Lautaro Souto
-## Contenido
+### Contenido
 - July
 - Brisa
-## Diseño/CSS
+### Diseño/CSS
 - Solange Maciel
 - Rebeca Giménez
+
+Instrucciones:
