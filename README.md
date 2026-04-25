@@ -1,2 +1,12 @@
-# Programacion-Web-1-2026
-Trabajo Practico 1
+# Fresh Clothes
+Nuestra pagina se trata de una simple web de tienda la cual vende diferentes tipos de indumentaria.
+
+## Estructura/HTML
+- Santiago Chavez
+- Lautaro Souto
+## Contenido
+- July
+- Brisa
+## Diseño/CSS
+- Solange Maciel
+- Rebeca Giménez
