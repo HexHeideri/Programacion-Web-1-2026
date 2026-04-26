@@ -1,5 +1,5 @@
-# Fresh Clothes
-Nuestra pagina se trata de una simple web de tienda la cual vende diferentes tipos de indumentaria.
+# Fresh Aroma
+Nuestra pagina se trata de una simple web de tienda la cual vende diferentes tipos de sahumerios.
 
 ### Estructura/HTML
 - Santiago Chavez
