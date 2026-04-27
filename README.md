@@ -5,8 +5,8 @@ Nuestra pagina se trata de una simple web de tienda la cual vende diferentes tip
 - Santiago Chavez
 - Lautaro Souto
 ### Contenido
-- July
-- Brisa
+- Julieta Gomez
+- Brisa Avit
 ### Diseño/CSS
 - Solange Maciel
 - Rebeca Giménez
