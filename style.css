@@ -101,7 +101,7 @@ h1 {
 
  /* Separar secciones */ 
 
- .tabla, .formulario {
+ tabla, formulario {
      margin: 20px auto;
      }
 
@@ -114,9 +114,12 @@ h3{
 table, th, td { 
     border: 1px solid #c0b73c; }
 
-table { border-collapse: collapse; }
+table { 
+    border-collapse: collapse; }
 
-table { border-collapse: collapse;
+
+table { 
+    border-collapse: collapse;
      margin: auto;
      } 
      
@@ -127,35 +130,46 @@ table { border-collapse: collapse;
 }
 
   table { 
+      
     margin: auto; 
     border-collapse: collapse; 
     width: 60%; background-color: #fff3e6; 
+      
 }
 
      th, td { 
+         
         padding: 10px; 
         border: 1px solid hwb(60 26% 24%);
+         
      }
 
 
 
       /* FORMULARIO */ 
-form { border: 1px solid #ccc;
+
+form {
+    border: 1px solid #ccc;
+    
      /* línea finita */ 
      padding: 20px;
+    
       /* espacio interno */
        width: 300px; 
        margin: auto; 
        border-radius: 8px; 
+    
     } 
 
      input, textarea { 
         border: 1px solid #ccc; 
+         
         /* línea finita */ 
         padding: 8px; 
         width: 100%; 
         margin-bottom: 10px; 
         border-radius: 5px; 
+         
     } 
 
     input:focus, textarea:focus {
@@ -166,16 +180,19 @@ form { border: 1px solid #ccc;
          }   
 
          form { 
+             
             border: 1px solid hsl(25, 22%, 85%); 
             background-color: #fff3e6;
          }
 
       form { 
+          
         width: 300px; 
         margin: auto; 
         padding: 20px; 
         background-color: #fff3e6; 
         border-radius: 10px; 
+          
     }
 
          input, textarea {
