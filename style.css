@@ -1,0 +1,288 @@
+@font-face {
+    font-family: "Test";
+    src: url('contenido/test.ttf') format('truetype');
+}
+
+body {
+    font-family: "Test", Arial, sans-serif;
+    font-size: 20px;
+    background: #5e5a35;
+    color: #f4efef;
+    margin: 200;
+    padding: 0;
+}
+.banner-container {
+position: relative;
+height: 60vh;
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #ffffff;
+}
+
+#banner-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.banner-container::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background: rgb(0, 0, 0);
+    z-index: 0;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.banner-principal {
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   gap: 10px;
+}
+
+.fresh-aromas {
+    font-style: italic;
+display:flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   height: 100px;
+}
+
+header img{
+    max-width: 100%;
+    max-height: 200px;
+    height: auto;
+    object-fit: cover;
+    margin-top: 15px;
+    display: block;
+}
+
+.contenedor-secciones {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.seccion-item{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.seccion-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.seccion-item:hover img{
+    transform: scale(1.1);
+}
+
+.navegacion-principal ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap:30px;
+    padding: 20px 0;
+}
+
+.navegacion-principal a{
+    color: #f8f7f7;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+button{
+    background: #726240;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+ background: #493d24;
+}
+footer{
+    background: #312913;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    footer{
+        flex-direction :column;
+        align-items:center;
+    }
+}
+
+.productos {
+    padding: 40px;
+    text-align: center;
+}
+
+/* GRILLA */
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* TARJETA */
+.producto {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.678);
+    transition: transform 0.2s;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+/* IMAGEN */
+.producto img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* TEXTO */
+.producto h3 {
+    margin-top: 10px;
+    color: rgb(90, 87, 87)
+}
+
+.producto p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* PRECIO */
+.precio {
+    font-weight: bold;
+    color: #25ac46;
+    margin: 10px 0;
+}
+
+/* BOTÓN */
+.producto button {
+    background-color: #7a4b2c;
+    color: rgb(44, 75, 40);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.producto button:hover {
+    background-color: #5a361f;
+}
+.intro {
+text-align: center;
+padding: 20px;
+}
+
+h1 {
+text-align: center;
+}
+
+.menu-fijo {
+    position: fixed; /* Fija el menú */
+    top: 0;          /* Alinea arriba */
+    left: 0;
+    width: 100%;    /* Ancho completo */
+    background-color: #312913; /* Color de fondo */
+    color: white;
+    z-index: 1000;  /* Asegura que esté por encima de todo */
+    height: 60px;    /* Altura definida */
+    text-align: center;
+}
+
+.menu-fijo nav {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 40px;
+height: 100%;
+}
+
+.menu-fijo ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    line-height: 60px;
+    text-align: center;
+}
+
+.menu-fijo a {
+    text-decoration: none;
+    color: white;
+    padding: 0 20px;
+    display: block;
+    text-align: center;
+}
+
+.beneficios {
+padding: 40px;
+text-align: center;
+background-color: #5e5a35;
+}
+
+.lista-beneficios {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 40px;
+max-width: 1000px;
+margin: 0 auto;
+}
+
+.beneficio {
+text-align: center;
+}
+
+.beneficio h3 {
+margin: 0 0 10px 0;
+}
+
+.beneficio p {
+margin: 0;
+}
+
+/* Links sin seleccionar */
+a {
+    color: #d6c091;
+    text-decoration: none;
+}
+
+/* Links cuando el mouse pasa por encima */
+a:hover {
+    color: #faf6f1;
+    text-decoration: underline;
+}
