@@ -311,43 +311,6 @@
     
 </section>
 <hr>
-
-    function calcularCompra() {
-
-    let sahumerios = parseInt(document.getElementById("sahumerios").value) || 0;
-    let aromatizantes = parseInt(document.getElementById("aromatizantes").value) || 0;
-    let velas = parseInt(document.getElementById("velas").value) || 0;
-    let defumacion = parseInt(document.getElementById("defumacion").value) || 0;
-
-    let cantidadTotal = sahumerios + aromatizantes + velas + defumacion;
-
-    let neto =
-        (sahumerios * 1000) +
-        (aromatizantes * 2000) +
-        (velas * 3000) +
-        (defumacion * 2500);
-
-    let porcentaje = 0;
-
-    if (cantidadTotal > 20) {
-        porcentaje = 30;
-    } else if (cantidadTotal > 10) {
-        porcentaje = 15;
-    } else if (cantidadTotal > 5) {
-        porcentaje = 5;
-    }
-
-    let descuento = neto * porcentaje / 100;
-    let total = neto - descuento;
-
-    document.getElementById("cantidad").textContent = cantidadTotal;
-    document.getElementById("neto").textContent = neto;
-    document.getElementById("descuento").textContent = descuento;
-    document.getElementById("total").textContent = total;
-}
-</script>
-
-    
 <footer>
     
 <h3>Fresh Aroma</h3>
