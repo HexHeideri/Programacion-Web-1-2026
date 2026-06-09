@@ -81,15 +81,10 @@ display:flex;
     
 }
 
-header img{
-    
+header img {
     max-width: 100%;
     max-height: 200px;
     height: auto;
-    object-fit: cover;
-    margin-top: 15px;
-    display: block;
-    
 }
 
 .contenedor-secciones {
@@ -192,14 +187,11 @@ footer{
 /* GRILLA */
 
 .grid-productos {
-    
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-top: 30px;
-    
 }
-
 /* TARJETA */
 
 .producto {
