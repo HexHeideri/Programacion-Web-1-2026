@@ -12,6 +12,32 @@ body {
     margin: 0;
     padding: 0;
 }
+/*dia*/
+html[data-theme="light"] {
+    --fondo-pantalla: #eef4ff;
+    --fondo-tarjeta: #0044cc;
+    --texto-principal: #000000;
+}
+
+/* noche */
+
+html[data-theme="dark"] {
+    --fondo-pantalla: #0f172a;
+    --fondo-tarjeta: #111827;
+    --texto-principal: #ffffff;
+}
+
+/* tecno efecto */
+
+.container {
+    border: 2px solid #00d4ff;
+    box-shadow:
+        0 0 10px rgba(0,212,255,0.4),
+        0 0 30px rgba(0,212,255,0.2);
+}
+
+
+
 .banner-container {
 position: relative;
 height: 60vh;
@@ -162,29 +188,6 @@ header img {
 
 .theme-btn:hover {
     transform: scale(1.1);
-}
-/*dia*/
-html[data-theme="light"] {
-    --fondo-pantalla: #eef4ff;
-    --fondo-tarjeta: #0044cc;
-    --texto-principal: #000000;
-}
-
-/* noche */
-
-html[data-theme="dark"] {
-    --fondo-pantalla: #0f172a;
-    --fondo-tarjeta: #111827;
-    --texto-principal: #ffffff;
-}
-
-/* tecno efecto */
-
-.container {
-    border: 2px solid #00d4ff;
-    box-shadow:
-        0 0 10px rgba(0,212,255,0.4),
-        0 0 30px rgba(0,212,255,0.2);
 }
 
 button{
