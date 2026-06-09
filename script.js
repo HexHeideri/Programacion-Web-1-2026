@@ -25,19 +25,19 @@ function CalcularCompra() {
     let velas = parseInt(document.getElementById("velas").value) || 0;
     let defumadores = parseInt(document.getElementById("defumadores").value) || 0;
     let difusores = parseInt(document.getElementById("difusores").value) || 0;
-    
-let cantidadTotal =
-    sahumerios +
-    aromatizantes +
-    defumadores +
-    difusores +
-    velas;
+
+    let cantidadTotal =
+        sahumerios +
+        aromatizantes +
+        defumadores +
+        difusores +
+        velas;
 
     let neto =
         (sahumerios * 1000) +
         (aromatizantes * 2000) +
         (velas * 3500) +
-        (defumadores * 2500)+
+        (defumadores * 2500) +
         (difusores * 3000);
 
     let porcentaje = 0;
@@ -58,4 +58,3 @@ let cantidadTotal =
     document.getElementById("descuento").textContent = descuento;
     document.getElementById("total").textContent = total;
 }
-</script>
