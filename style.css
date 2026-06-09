@@ -384,3 +384,43 @@ a:hover {
     text-decoration: underline;
     
 }
+
+.carrito{
+    width: 90%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.carrito table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.carrito th,
+.carrito td{
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.carrito th{
+    background-color: #e6d3b3;
+}
+
+.carrito input{
+    width: 60px;
+    text-align: center;
+}
+
+.carrito button{
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#resultado{
+    margin-top: 20px;
+    font-size: 18px;
+}
+
