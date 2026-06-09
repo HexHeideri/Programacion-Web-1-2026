@@ -449,4 +449,8 @@ select {
     width: 50%;
     margin: 20px auto;
 }
-
+img {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
