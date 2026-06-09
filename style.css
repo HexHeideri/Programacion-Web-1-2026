@@ -67,6 +67,16 @@ color: #ffffff;
     
 }
 
+.banner{
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: none;
+}
+
+
 .fresh-aromas {
     
     font-style: italic;
@@ -439,11 +449,4 @@ select {
     width: 50%;
     margin: 20px auto;
 }
-.banner{
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border: none;
-}
+
