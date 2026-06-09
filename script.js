@@ -16,7 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
             raizHtml.setAttribute("data-theme", "dark");
             iconoTema.textContent = "🌙";
         }
-    };
+    });
+
+});
 
 function CalcularCompra() {
 
