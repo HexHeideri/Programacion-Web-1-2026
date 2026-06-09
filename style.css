@@ -7,36 +7,12 @@
 body {
     font-family: "Test", Arial, sans-serif;
     font-size: 20px;
-    background: #5e5a35;
-    color: #f4efef;
+    background: var (--fondo-pantalla);
+    color: var(--texto-principal);
     margin: 0;
     padding: 0;
+    transition: all 0.4s ease;
 }
-/*dia*/
-html[data-theme="light"] {
-    --fondo-pantalla: #eef4ff;
-    --fondo-tarjeta: #0044cc;
-    --texto-principal: #000000;
-}
-
-/* noche */
-
-html[data-theme="dark"] {
-    --fondo-pantalla: #0f172a;
-    --fondo-tarjeta: #111827;
-    --texto-principal: #ffffff;
-}
-
-/* tecno efecto */
-
-.container {
-    border: 2px solid #00d4ff;
-    box-shadow:
-        0 0 10px rgba(0,212,255,0.4),
-        0 0 30px rgba(0,212,255,0.2);
-}
-
-
 
 .banner-container {
 position: relative;
@@ -496,4 +472,47 @@ img {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
+}
+/* MODO DÍA */
+
+html[data-theme="light"] .menu-fijo {
+    background-color: #312913;
+}
+
+html[data-theme="light"] footer {
+    background-color: #312913;
+}
+
+html[data-theme="light"] .seccion-item {
+    background-color: #726240;
+}
+
+/* MODO NOCHE */
+
+html[data-theme="dark"] .menu-fijo {
+    background-color: #111827;
+}
+
+html[data-theme="dark"] footer {
+    background-color: #111827;
+}
+
+html[data-theme="dark"] .seccion-item {
+    background-color: #1f2937;
+}
+
+html[data-theme="dark"] a {
+    color: #7dd3fc;
+}
+
+html[data-theme="dark"] a:hover {
+    color: white;
+}
+
+html[data-theme="dark"] .banner-content {
+    color: white;
+}
+
+html[data-theme="dark"] .theme-btn {
+    background: #facc15;
 }
