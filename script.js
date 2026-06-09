@@ -1,5 +1,5 @@
 <script>
-function calcularCompra() {
+function CalcularCompra() {
 
     let sahumerios = parseInt(document.getElementById("sahumerios").value) || 0;
     let aromatizantes = parseInt(document.getElementById("aromatizantes").value) || 0;
