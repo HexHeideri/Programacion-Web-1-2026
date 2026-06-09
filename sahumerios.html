@@ -285,9 +285,34 @@
         <p>Total a pagar: $<span id="total">0</span></p>
     </div>
 </section>
+        
+        <br><br>
+        <label>Aroma:</label><br>
+        
+        <select> 
+            <option value="">Seleccionar</option>
+            <option>Lavanda</option>
+            <option>Vainilla</option>
+            <option>Canela</option>
+            <option>Sándalo</option>
+            <option>Limón</option>
+            <option>Otro</option>
+        </select>
+        
+        <br><br>
+        <label>Cantidad:</label><br>
+        <input type="number" min="1" value="1">
+        <br><br>
+        <label>Comentarios:</label><br>
+        <textarea placeholder="Escribí algo..."></textarea>
+        <br><br>
+        <input type="submit" value="Enviar pedido">
+    </form>
+    
+</section>
+<hr>
 
-<script>
-function calcularCompra() {
+    function calcularCompra() {
 
     let sahumerios = parseInt(document.getElementById("sahumerios").value) || 0;
     let aromatizantes = parseInt(document.getElementById("aromatizantes").value) || 0;
@@ -322,32 +347,6 @@ function calcularCompra() {
 }
 </script>
 
-        
-        <br><br>
-        <label>Aroma:</label><br>
-        
-        <select> 
-            <option value="">Seleccionar</option>
-            <option>Lavanda</option>
-            <option>Vainilla</option>
-            <option>Canela</option>
-            <option>Sándalo</option>
-            <option>Limón</option>
-            <option>Otro</option>
-        </select>
-        
-        <br><br>
-        <label>Cantidad:</label><br>
-        <input type="number" min="1" value="1">
-        <br><br>
-        <label>Comentarios:</label><br>
-        <textarea placeholder="Escribí algo..."></textarea>
-        <br><br>
-        <input type="submit" value="Enviar pedido">
-    </form>
-    
-</section>
-<hr>
     
 <footer>
     
