@@ -179,12 +179,22 @@
         
         <thead>
             <tr>
-                <th>Sahumerios</th>
-                <th>Atomizadores</th>
-                <th>Defumadores</th> 
-                <th>Difusores</th> 
-                <th>Velas</th>
-            </tr>
+    <td>Sahumerios</td>
+
+    <td>
+        <select id="aromaSahumerio">
+            <option>Romero-Vainilla</option>
+            <option>Sándalo-Canela</option>
+            <option>Rosa-Vainilla</option>
+        </select>
+    </td>
+
+    <td>$1000</td>
+
+    <td>
+        <input type="number" id="sahumerios" min="0" value="0">
+    </td>
+</tr>
         </thead>
 
         <tbody>
@@ -223,35 +233,71 @@
     <h2>Carrito de Compras</h2>
 
     <table>
-        <tr>
-            <th>Producto</th>
-            <th>Precio</th>
-            <th>Cantidad</th>
-        </tr>
-
+       <tr>
+    <th>Producto</th>
+    <th>Aroma</th>
+    <th>Precio</th>
+    <th>Cantidad</th>
+</tr>
         <tr>
             <td>Sahumerios</td>
             <td>$1000</td>
             <td><input type="number" id="sahumerios" min="0" value="0"></td>
         </tr>
 
-        <tr>
-            <td>Aromatizantes</td>
-            <td>$2000</td>
-            <td><input type="number" id="aromatizantes" min="0" value="0"></td>
-        </tr>
+       <tr>
+    <td>Aromatizantes</td>
 
-        <tr>
-            <td>Velas</td>
-            <td>$3000</td>
-            <td><input type="number" id="velas" min="0" value="0"></td>
-        </tr>
+    <td>
+        <select id="aromaAtomizador">
+            <option>La Vida es Bella</option>
+            <option>Vainilla</option>
+            <option>Frutos del Bosque</option>
+        </select>
+    </td>
 
-        <tr>
-            <td>Defumación</td>
-            <td>$2500</td>
-            <td><input type="number" id="defumacion" min="0" value="0"></td>
-        </tr>
+    <td>$2000</td>
+
+    <td>
+        <input type="number" id="aromatizantes" min="0" value="0">
+    </td>
+</tr>
+
+       <tr>
+    <td>Defumación</td>
+
+    <td>
+        <select id="aromaDefumacion">
+            <option>Rosas</option>
+            <option>Bebé</option>
+            <option>Tropical</option>
+        </select>
+    </td>
+
+    <td>$2500</td>
+
+    <td>
+        <input type="number" id="defumacion" min="0" value="0">
+    </td>
+</tr>
+
+<tr>
+    <td>Velas</td>
+
+    <td>
+        <select id="aromaVelas">
+            <option>Lavanda</option>
+            <option>Limón</option>
+            <option>Jazmín</option>
+        </select>
+    </td>
+
+    <td>$3000</td>
+
+    <td>
+        <input type="number" id="velas" min="0" value="0">
+    </td>
+</tr>
     </table>
 
     <h3>Tabla de Descuentos</h3>
@@ -275,7 +321,9 @@
         </tr>
     </table>
 
-    <button onclick="calcularCompra()">Calcular Compra</button>
+   <button type="button" onclick="calcularCompra()">
+    Calcular Compra
+</button>
 
     <div id="resultado">
         <h3>Resumen de Compra</h3>
@@ -286,22 +334,7 @@
     </div>
 </section>
         
-        <br><br>
-        <label>Aroma:</label><br>
-        
-        <select> 
-            <option value="">Seleccionar</option>
-            <option>Lavanda</option>
-            <option>Vainilla</option>
-            <option>Canela</option>
-            <option>Sándalo</option>
-            <option>Limón</option>
-            <option>Otro</option>
-        </select>
-        
-        <br><br>
-        <label>Cantidad:</label><br>
-        <input type="number" min="1" value="1">
+     
         <br><br>
         <label>Comentarios:</label><br>
         <textarea placeholder="Escribí algo..."></textarea>
@@ -317,5 +350,6 @@
 <p>© 2025 Fresh Aroma - Todos los derechos reservados</p>
     
 </footer>
+</scrip>
 </body>
 </html>
