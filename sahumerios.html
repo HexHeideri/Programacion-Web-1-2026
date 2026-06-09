@@ -258,7 +258,7 @@
     <td>$2000</td>
 
     <td>
-        <input type="number" id="aromatizantes" min="0" value="0">
+        <input type="number" id="defumadores" min="0" value="0">
     </td>
 </tr>
 
@@ -266,7 +266,7 @@
     <td>Defumadores</td>
 
     <td>
-        <select id="aromaDefumacion">
+       <select id="aromaDifusores">
             <option>Rosas</option>
             <option>Bebé</option>
             <option>Tropical</option>
@@ -276,7 +276,7 @@
     <td>$2500</td>
 
     <td>
-        <input type="number" id="defumacion" min="0" value="0">
+        <input type="number" id="difusores" min="0" value="0">
     </td>
 </tr>
 
@@ -375,9 +375,10 @@ function calcularCompra() {
     let sahumerios = parseInt(document.getElementById("sahumerios").value) || 0;
     let aromatizantes = parseInt(document.getElementById("aromatizantes").value) || 0;
     let velas = parseInt(document.getElementById("velas").value) || 0;
-    let defumacion = parseInt(document.getElementById("defumacion").value) || 0;
-
-    let cantidadTotal = sahumerios + aromatizantes + velas + defumacion;
+    let defumadores = parseInt(document.getElementById("defumadores").value) || 0;
+    let difusores = parseInt(document.getElementById("difusores").value) || 0;
+    
+    let cantidadTotal = sahumerios + aromatizantes + defumadores + difusores + velas;
 
     let neto =
         (sahumerios * 1000) +
