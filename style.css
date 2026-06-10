@@ -1,13 +1,20 @@
 @font-face {
-    
     font-family: "Test";
     src: url('contenido/test.ttf') format('truetype');
 }
+html[data-theme="light"] {
+    --fondo-pantalla: #5e5a35;
+    --texto-principal: #f4efef;
+}
 
+html[data-theme="dark"] {
+    --fondo-pantalla: #1a2233;
+    --texto-principal: #f4efef;
+} 
 body {
     font-family: "Test", Arial, sans-serif;
     font-size: 20px;
-    background: var (--fondo-pantalla);
+    background: var(--fondo-pantalla);
     color: var(--texto-principal);
     margin: 0;
     padding: 0;
@@ -515,13 +522,4 @@ html[data-theme="dark"] .banner-content {
 
 html[data-theme="dark"] .theme-btn {
     background: #facc15;
-}
-html[data-theme="dark"] body {
-    background: #0f172a;
-    color: white;
-}
-
-html[data-theme="light"] body {
-    background: #eef4ff;
-    color:black;
 }
