@@ -516,3 +516,12 @@ html[data-theme="dark"] .banner-content {
 html[data-theme="dark"] .theme-btn {
     background: #facc15;
 }
+html[data-theme="dark"] body {
+    background: #0f172a;
+    color: white;
+}
+
+html[data-theme="light"] body {
+    background: #eef4ff;
+    color:black;
+}
