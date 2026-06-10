@@ -1,22 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
+
     const botonTema = document.getElementById("toggle-theme");
     const iconoTema = document.getElementById("theme-icon");
     const raizHtml = document.documentElement;
-    
-    botonTema.addEventListener("click", () => {
-        const temaActual = raizHtml.getAttribute("data-theme");
 
-        if (temaActual === "dark") {
-            raizHtml.setAttribute("data-theme", "light");
-            iconoTema.textContent = "🌞";
-        } else {
-            raizHtml.setAttribute("data-theme", "dark");
-            iconoTema.textContent = "🌙";
-        }
-    });
+    if (botonTema && iconoTema) {
+
+        botonTema.addEventListener("click", () => {
+
+            const temaActual = raizHtml.getAttribute("data-theme");
+
+            if (temaActual === "dark") {
+                raizHtml.setAttribute("data-theme", "light");
+                iconoTema.textContent = "🌞";
+            } else {
+                raizHtml.setAttribute("data-theme", "dark");
+                iconoTema.textContent = "🌙";
+            }
+
+        });
+
+    }
 
 });
-
 function CalcularCompra() {
 
     let sahumerios = Number(document.getElementById("sahumerios").value);
