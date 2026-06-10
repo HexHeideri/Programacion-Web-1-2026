@@ -523,3 +523,62 @@ html[data-theme="dark"] .banner-content {
 html[data-theme="dark"] .theme-btn {
     background: #facc15;
 }
+html[data-theme="dark"] .menu-fijo {
+    background-color: #111827;
+}
+
+html[data-theme="dark"] footer {
+    background-color: #111827;
+}
+
+html[data-theme="dark"] .seccion-item {
+    background-color: #1f2937;
+}
+
+html[data-theme="dark"] .producto {
+    background-color: #273449;
+}
+
+html[data-theme="dark"] .producto h3 {
+    color: #ffffff;
+}
+
+html[data-theme="dark"] .producto p {
+    color: #d1d5db;
+}
+
+html[data-theme="dark"] td {
+    background-color: #273449;
+    color: white;
+}
+
+html[data-theme="dark"] th {
+    background-color: #1f2937;
+    color: white;
+}
+
+html[data-theme="dark"] #resultado {
+    background-color: #273449;
+    color: white;
+}
+
+html[data-theme="dark"] input,
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea {
+    background-color: #1f2937;
+    color: white;
+    border: 1px solid #4b5563;
+}
+
+html[data-theme="dark"] a {
+    color: #7dd3fc;
+}
+
+html[data-theme="dark"] a:hover {
+    color: white;
+}
+
+html[data-theme="dark"] .theme-btn {
+    background: #facc15;
+    color: black;
+}
