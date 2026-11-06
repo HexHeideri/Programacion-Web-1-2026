@@ -1,66 +1,55 @@
+
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Fresh Aroma</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="contenido/logo 2.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creadores de Fantasías. Figuras navideñas para llenar tu hogar de magia.">
+    <title>Creadores de Fantasías | Navidad</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
-    
-<body>   
-<div class="menu-fijo">    
-    <nav style="display: flex; gap: 20px;">
-        <a href="index.html">Inicio</a>
-        <a href="sahumerios.html">Productos</a>
-        <a href="contacto.html">Contacto</a>
 
-         <button id="toggle-theme" class="theme-btn">
-      <span id="theme-icon">🌞</span>
-  </button>
-    </nav>
-</div>
+<body class="pagina-inicio pagina-fondo-navidad">
 
-<header class="banner-container">
-    <video autoplay muted loop playsinline id="banner-video">
-      <source src="contenido\vid3.mp4" type="video/mp4">
-      Tu navegador no soporta videos.  
-    </video>
-    
-    <div class="banner-content">
-        <h1>Bienvenidos Fresh Aromas</h1>
-        <p>Las mejores ofertas aqui</p>
-    </div>
-</header>
+    <main class="marco-pagina">
+        
+        <picture class="fondo-responsive">
+            <source media="(max-width: 700px)" srcset="img/fondoceluinicio.jpg">
+            <img src="img/fondo-navidad1.png" alt="" class="fondo-navidad1">
+        </picture>
 
-<section class="contenedor-secciones">
-  <div class="seccion-item">
-    <img src="contenido\IMG_5991.jpeg" alt="Sahumerios">
-    <p>Sahumerios</p>
-</div>
+        <nav class="zona-menu-superior" aria-label="Menú principal">
+            <a href="index.html" aria-label="Inicio" title="Inicio"></a>
+            <a href="productos.html" aria-label="Nuestras figuras" title="Nuestras figuras"></a>
+            <a href="contactos.html" aria-label="Contacto" title="Contacto"></a>
+        </nav>
 
-<div class="seccion-item">
-    <img src="contenido\IMG_5992.jpeg" alt="Aromatizantes">
-    <p>Aromatizantes</p>
-</div>
+        <section class="presentacion">
+            <div class="presentacion-texto">
 
-<div class="seccion-item">
-    <img src="contenido\IMG_5993.jpeg" alt="Velas">
-    <p>Velas</p>
-</div>
+                <h1>Creadores de Fantasías</h1>
 
-<div class="seccion-item">
-    <img src="contenido\IMG_5994.jpeg" alt="Defumacion">
-    <p>Defumacion</p>
-</div>
+                <p>
+                    Creamos productos mágicos para transformar
+                    todo tipo de espacios: comercios, instituciones,
+                    eventos y hogares.
+                </p>
 
-</section>
-    
-<footer>
-<h3>Fresh Aroma</h3>
-<p>© 2026 Fresh Aroma - Todos los derechos reservados</p>
-</footer>
-<script src="script.js" defer></script>
-    
+                <p>
+                    ¡Descubrí nuestras figuras y encontrá
+                    ese detalle especial para llenar cada espacio
+                    de magia navideña!
+                </p>
+            </div>
+
+            <div class="presentacion-imagen">
+                <img src="img/portada.jpg"
+                     alt="Figuras navideñas de Creadores de Fantasías">
+            </div>
+        </section>
+    </main>
+
+    <script src="nieve.js"></script>
+
 </body>
 </html>

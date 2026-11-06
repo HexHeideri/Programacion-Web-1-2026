@@ -1,0 +1,2444 @@
+
+/* =================================
+   CREADORES DE FANTASÍAS
+   Estilos generales
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* Colores de nuestro emprendimiento */
+:root {
+    --verde: #024902;
+    --rojo: #8d0101;
+    --dorado: #f8bb1f;
+    --blanco: #ffffff;
+    --crema: #d8ac73;
+    --texto: #060470;
+    --celeste: #0fc4ca;
+}
+
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: var(--crema);
+    color: var(--texto);
+    line-height: 1.6;
+    overflow-y: auto;
+}
+
+
+/* MENÚ SUPERIOR */
+header {
+    background-color: #ebcaa0;
+    border-bottom: 2px solid var(--dorado);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+}
+
+.menu {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    text-decoration: none;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.logo-verde {
+    color: var(--verde);
+}
+
+.logo-rojo {
+    color: var(--rojo);
+}
+
+.adorno {
+    color: var(--celeste);
+    margin-left: 5px;
+}
+
+/* ENLACES DEL MENÚ */
+.enlaces {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.enlaces a {
+    color: var(--verde);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.enlaces a:hover {
+    color: var(--rojo);
+}
+
+.enlaces a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--dorado);
+    text-underline-offset: 6px;
+}
+
+/* PRESENTACIÓN */
+.presentacion {
+    max-width: 1200px;
+    min-height: 75vh;
+    margin: auto;
+    padding: 70px 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.presentacion-texto {
+    flex: 1;
+}
+
+
+.presentacion h1 {
+    color: var(--rojo);
+   font-size: clamp(5.5rem, 10vw, 8.5rem);
+    line-height: 1.2;
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 0 5px #f37272,
+        0 0 12px #e22727,
+        0 0 25px #9e0505;
+
+    animation: brilloTitulo 3s ease-in-out infinite;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    letter-spacing: 0;
+
+    transform: translateY(35px);
+    margin-top: 20px;
+    position: relative;
+    left: 40px;
+}
+
+@keyframes brilloTitulo {
+    0%, 100% {
+        transform: scale(1);
+        text-shadow:
+            0 0 5px #ece030,
+            0 0 12px #d3c507;
+    }
+    50% {
+        transform: scale(1.04);
+        text-shadow:
+            0 0 8px #19bd26,
+            0 0 20px #1b9403,
+            0 0 35px #085302;
+    }
+}
+
+.presentacion-texto > p:not(.subtitulo) {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    transform: translateY(60px);
+}
+
+/* BOTÓN */
+.boton {
+    display: inline-block;
+    background-color: #fac534;
+    color: #350435;
+    padding: 14px 26px;
+    border: 1px solid #8f6502;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 12px #f0c65280;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #f3d77e;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px #e5bd50;
+}
+
+/* FOTO DE PORTADA */
+.presentacion-imagen {
+    flex: 1;
+    min-width: 0;
+}
+
+.presentacion-imagen img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 2.0s ease-in-out;
+}
+
+.presentacion-imagen img:hover {
+    transform: scale(1.04);
+}
+
+/* PIE DE PÁGINA */
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    border-top: 1px solid var(--dorado);
+    background-color: var(--crema);
+}
+
+
+/* ❄️ Nevada natural */
+.capa-nieve {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.copo-nieve {
+    position: absolute;
+    top: -10vh;
+    color: #fff;
+    line-height: 1;
+    user-select: none;
+    will-change: transform;
+    animation: caerCopo linear infinite;
+}
+
+@keyframes caerCopo {
+    from {
+        transform: translate3d(0, -10vh, 0) rotate(0deg);
+    }
+    to {
+        transform: translate3d(var(--deriva), 115vh, 0) rotate(360deg);
+    }
+}
+
+
+/* =================================
+   CATÁLOGO DE PRODUCTOS
+================================= */
+
+.catalogo {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 40px 0 70px;
+}
+
+
+
+.encabezado-catalogo {
+    text-align: center;
+    margin-bottom: 55px;
+    padding: 25px 10px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    animation: none;
+}
+
+
+@keyframes fondoNavideno {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+
+.encabezado-catalogo h1 {
+    color: var(--rojo);
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1.2;
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 0 5px #ece030,
+        0 0 12px #d3c507;
+
+    animation: brilloCatalogo 3s ease-in-out infinite;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+}
+
+@keyframes brilloCatalogo {
+    0%, 100% {
+        text-shadow:
+            0 0 5px #ece030,
+            0 0 12px #d3c507;
+    }
+
+    50% {
+        text-shadow:
+            0 0 8px #19bd26,
+            0 0 20px #1b9403,
+            0 0 35px #085302;
+    }
+}
+.encabezado-catalogo p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: var(--texto);
+}
+
+
+/* Lista de figuras */
+
+.lista-productos {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+
+.producto-imagen {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 25px;
+    background: transparent;
+}
+
+.producto {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding: 30px;
+    border: 1px solid #d87504;
+    border-radius: 24px;
+
+    background-color: #e9c5a1;
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,0.85) 1.5px, transparent 2.5px),
+        radial-gradient(circle, rgba(255,255,255,0.65) 2px, transparent 3px),
+        radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 2px);
+
+    background-size: 43px 43px, 67px 67px, 31px 31px;
+    background-position: 0 0, 20px 15px, 10px 25px;
+
+    box-shadow: 0 5px 18px rgba(75, 48, 12, 0.10);
+    position: relative;
+    overflow: hidden;
+}
+
+.producto:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+
+.producto-imagen {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 25px;
+    background: transparent;
+}
+
+.producto-imagen img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 25px;
+    box-shadow: 0 0 12px rgba(184, 134, 11, 0.20);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.producto-imagen img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(184, 134, 11, 0.45);
+}
+
+
+
+
+/* Texto de cada producto */
+
+.producto-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.producto-info h2 {
+    font-family: Georgia, serif;
+    color: #024902;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    margin-bottom: 18px;
+}
+
+.producto-info p {
+    color: #39352f;
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 650px) {
+    .producto,
+    .producto:nth-child(even) {
+        flex-direction: column;
+        gap: 22px;
+        padding: 16px;
+    }
+
+    .producto-imagen,
+    .producto-info {
+        width: 100%;
+        flex: auto;
+    }
+
+    .lista-productos {
+        gap: 30px;
+    }
+}
+
+
+/* Fotos del catálogo: bordes redondeados y brillo rojo */
+.lista-productos .producto .producto-imagen {
+    border-radius: 25px;
+    overflow: hidden;
+    background: transparent;
+    clip-path: inset(0 round 25px);
+}
+
+.lista-productos .producto .producto-imagen img {
+    display: block;
+    width: 100%;
+    border-radius: 25px !important;
+    box-shadow: 0 0 15px 3px rgba(204, 1, 1, 0.45);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.lista-productos .producto .producto-imagen img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 28px 8px rgba(204, 1, 1, 0.75);
+}
+
+
+/* Se desactiva el adorno superior antiguo */
+body.pagina-fondo-navidad::before {
+    content: none;
+}
+
+/* Contenedor principal de la página de productos con las carpetas */
+.pagina-productos {
+    background-color: transparent !important;
+}
+
+.catalogo {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 70px;
+}
+
+.encabezado-catalogo {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.encabezado-catalogo h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(3rem, 6vw, 5rem);
+    color: #8d0101;
+    margin-bottom: 15px;
+    text-shadow: 0 0 8px rgba(248, 187, 31, 0.6);
+}
+
+.encabezado-catalogo p {
+    font-size: 1.2rem;
+    color: #39352f;
+}
+
+/* El pie también deja ver la textura */
+footer {
+    background-color: transparent;
+}
+
+
+/* El contenido queda por encima de los destellos */
+header,
+main,
+footer {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* BOTONES TRANSPARENTES DEL MENÚ */
+.pagina-productos-sobres .zona-menu-superior {
+    position: absolute;
+    top: 2%;
+    left: 0;
+    width: 100%;
+    height: 7%;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.pagina-productos-sobres .zona-menu-superior a {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: block;
+    pointer-events: auto;
+}
+
+
+/* Cuatro áreas clicables sobre las carpetas */
+.pagina-productos-exacta .grilla-carpetas-invisibles {
+    position: absolute;
+    top: 27%;
+    left: 7%;
+    width: 86%;
+    height: 65%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 5%;
+    z-index: 5;
+}
+
+.pagina-productos-exacta .grilla-carpetas-invisibles a {
+    display: block;
+    min-width: 0;
+    min-height: 0;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+/* Ayuda a ver dónde está el área clicable */
+.pagina-productos-exacta .grilla-carpetas-invisibles a:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    box-shadow: inset 0 0 0 2px rgba(248, 187, 31, 0.8);
+}
+
+/* Adaptación a pantallas chicas */
+@media (max-width: 600px) {
+    body.pagina-productos-exacta {
+        padding: 8px;
+    }
+
+    .pagina-productos-exacta .marco-pagina {
+        max-width: 100%;
+    }
+}
+
+
+/* =====================================
+   INICIO - CREADORES DE FANTASÍAS
+===================================== */
+
+body.pagina-fondo-navidad {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.pagina-fondo-navidad .marco-pagina {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.pagina-fondo-navidad .fondo-navidad1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: calc(120% + 100px);
+    object-fit: fill;
+    object-position: left top;
+    pointer-events: none;
+}
+
+/* Menú transparente sobre la imagen */
+.pagina-fondo-navidad .zona-menu-superior {
+    position: absolute;
+    top: 2%;
+    left: 0;
+    width: 100%;
+    height: 7%;
+    z-index: 10;
+}
+
+.pagina-fondo-navidad .zona-menu-superior a {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: block;
+}
+
+.pagina-fondo-navidad .zona-menu-superior a:nth-child(1) {
+    left: 60%;
+    width: 8%;
+}
+
+.pagina-fondo-navidad .zona-menu-superior a:nth-child(2) {
+    left: 69%;
+    width: 9%;
+}
+
+.pagina-fondo-navidad .zona-menu-superior a:nth-child(3) {
+    left: 79%;
+    width: 10%;
+}
+
+/* Texto y foto de portada */
+.pagina-fondo-navidad .presentacion {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4%;
+    width: 90%;
+    max-width: 1400px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 100px 2% 50px;
+}
+
+.pagina-fondo-navidad .presentacion-texto {
+    flex: 1 1 50%;
+    min-width: 0;
+    color: #633516;
+    text-align: center;
+}
+
+.pagina-fondo-navidad .presentacion-texto h1 {
+    color: #b42320;
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 0 0 25px;
+    text-shadow: 0 0 5px #f5d76e, 0 0 15px #d4a900;
+}
+
+.pagina-fondo-navidad .presentacion-texto .subtitulo {
+    color: #27613a;
+    font-size: clamp(16px, 1.8vw, 25px);
+}
+
+.pagina-fondo-navidad .presentacion-texto p {
+    font-size: clamp(1.1rem, 1.7vw, 1.5rem);
+    line-height: 1.8;
+    text-align: center;
+    margin: 0 auto 22px;
+    max-width: 650px;
+}
+
+.pagina-fondo-navidad .presentacion-imagen {
+    flex: 1 1 45%;
+    min-width: 0;
+}
+
+.pagina-fondo-navidad .presentacion-imagen img {
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    max-height: 420px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 60%;
+    object-fit: contain;
+}
+
+/* Título Nuestras figuras */
+.pagina-productos-sobres .titulo-nuestras-figuras {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 400;
+    top: 110px;
+    line-height: 1.2;
+    color: #bd3035;
+    text-shadow:
+        0 0 5px #ece030,
+        0 0 12px #d3c507;
+
+    animation: brilloCatalogo 3s ease-in-out infinite;
+}
+
+/* Brillo navideño */
+@keyframes brilloCatalogo {
+    0%, 100% {
+        transform: scale(1);
+        text-shadow:
+            0 0 5px #ece030,
+            0 0 12px #d3c507;
+    }
+
+    50% {
+        transform: scale(1.04);
+        text-shadow:
+            0 0 8px #19bd26,
+            0 0 20px #1b9403,
+            0 0 35px #085302;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .contenedor-sobres {
+        width: 84%;
+        padding-top: 195px;
+        gap: 22px 16px;
+    }
+
+    .titulo-nuestras-figuras {
+        top: 125px;
+        font-size: 27px;
+    }
+}
+
+/* Tarjetas de categorías de productos */
+.tarjetas-productos {
+    position: absolute;
+    top: 37%;
+    left: 18%;
+    width: 74%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    z-index: 5;
+}
+
+.tarjetas-productos .tarjeta-contacto {
+    text-align: center;
+    padding: 30px 24px;
+}
+
+.tarjetas-productos .tarjeta-contacto h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+}
+
+.tarjetas-productos .tarjeta-contacto p {
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+}
+
+@media (max-width: 650px) {
+    .tarjetas-productos {
+        top: 28%;
+        left: 5%;
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
+
+
+/* =====================================
+   AJUSTES FINALES DE LA PÁGINA DE INICIO
+===================================== */
+
+body.pagina-fondo-navidad {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.pagina-fondo-navidad .marco-pagina {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.pagina-fondo-navidad .fondo-navidad1 {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: calc(110% + 98px);
+    object-fit: fill;
+    object-position: left top;
+    pointer-events: none;
+}
+
+/* Menú invisible sobre el fondo */
+.pagina-fondo-navidad .zona-menu-superior {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.pagina-fondo-navidad .zona-menu-superior a {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: block;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* Presentación */
+.pagina-fondo-navidad .presentacion {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4%;
+    width: 90%;
+    max-width: 1400px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 90px 2% 50px;
+}
+
+.pagina-fondo-navidad .presentacion-texto {
+    flex: 1 1 100%;
+    min-width: 0;
+    color: #5f3011;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.pagina-fondo-navidad .presentacion-texto h1 {
+    color: #b42320;
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(4rem, 7vw, 6.5rem);
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 0 auto 30px;
+    text-align: center;
+    text-shadow: 0 0 5px #f5d76e, 0 0 15px #d4a900;
+    position: relative;
+    left: 190px;
+    top: 15px;
+}
+
+.pagina-fondo-navidad .presentacion-texto p {
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
+    line-height: 1.8;
+    text-align: center;
+    margin: 0 auto 22px;
+    max-width: 650px;
+}
+
+.pagina-fondo-navidad .presentacion-imagen {
+    flex: 1 1 45%;
+    min-width: 0;
+    padding-top: 70px;
+}
+
+.pagina-fondo-navidad .presentacion-imagen img {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    top: 110px;
+}
+
+.pagina-productos-sobres .tarjetas-productos {
+    transform: translateY(55px);
+    
+}
+
+
+.pagina-productos-sobres .zona-menu-superior a:nth-child(1) {
+    left: 62%;
+    width: 4%;
+}
+
+.pagina-productos-sobres .zona-menu-superior a:nth-child(2) {
+    left: 68.4%;
+    width: 9.5%;
+}
+
+.pagina-productos-sobres .zona-menu-superior a:nth-child(3) {
+    left: 80.5%;
+    width: 5.5%;
+}
+
+.pagina-productos-sobres .fondo-navidad {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 96%;
+    object-fit: fill;
+}
+
+/* =====================================
+   CATÁLOGO DE FIGURAS
+===================================== */
+
+.pagina-productos-sobres .catalogo-figuras {
+    position: absolute;
+    top: 30%;
+    left: 8%;
+    width: 84%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    padding-bottom: 40px;
+    z-index: 5;
+}
+
+.pagina-productos-sobres .catalogo-figuras .figura {
+    padding: 14px;
+    text-align: center;
+    background: rgba(233, 197, 161, 0.95);
+    border: 1px solid #d87504;
+    border-radius: 20px;
+    box-shadow: 0 5px 18px rgba(75, 48, 12, 0.15);
+}
+
+.pagina-productos-sobres .catalogo-figuras .figura img {
+    display: block;
+    width: 85%;
+    height: 145px;
+    margin: 0 auto;
+    object-fit: contain;
+    border-radius: 14px;
+    cursor: zoom-in;
+    transition: transform 0.25s ease;
+}
+
+.pagina-productos-sobres .catalogo-figuras .figura img:hover {
+    transform: scale(1.04);
+}
+
+.pagina-productos-sobres .catalogo-figuras .figura h2 {
+    margin: 12px 0 4px;
+    color: #024902;
+    font-size: 1.2rem;
+}
+
+/* =====================================
+   VISOR DE FOTOS AMPLIADAS
+===================================== */
+
+.visor-foto {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.88);
+    cursor: zoom-out;
+}
+
+.visor-foto.activo {
+    display: flex;
+}
+
+.visor-foto img {
+    display: block;
+    max-width: 92vw;
+    max-height: 88vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.visor-foto .cerrar-visor {
+    position: absolute;
+    top: 15px;
+    right: 22px;
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 38px;
+    cursor: pointer;
+}
+
+/* =================================
+   FICHA AMPLIADA DEL PRODUCTO
+================================= */
+
+.visor-foto {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(15, 25, 15, 0.82);
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.visor-foto.activo {
+    display: flex;
+}
+
+.ficha-producto {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    width: min(900px, 95%);
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 30px;
+    background: #fff9ef;
+    border: 2px solid #d6a94e;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+.ficha-producto .ficha-imagen {
+    width: 55%;
+    height: 280px;
+    max-height: 45vh;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.ficha-info {
+    flex: 1;
+    color: #263b27;
+    text-align: left;
+}
+
+.ficha-info h2 {
+    color: #024902;
+    font-size: 1.8rem;
+    margin: 0 0 10px;
+    margin-bottom: 8px;
+}
+
+.ficha-info p {
+    color: #3d4938;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 7px 0;
+}
+
+.ficha-info strong {
+    color: #8a5b19;
+}
+
+.ficha-codigo {
+    color: #8a5b19 !important;
+    font-weight: bold;
+}
+
+.cantidad-producto {
+    margin: 20px 0;
+    color: #263b27;
+}
+
+.cantidad-producto input {
+    width: 65px;
+    padding: 8px;
+    margin-left: 8px;
+    border: 1px solid #c9a45c;
+    border-radius: 8px;
+}
+
+.ficha-info button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.consultar-precio {
+    background: #16834a;
+}
+
+.agregar-carrito {
+    background: #9b2525;
+}
+
+.cerrar-visor {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    color: #7c2929;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* CELULAR */
+@media (max-width: 650px) {
+    .ficha-producto {
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px 20px;
+    }
+
+    .ficha-imagen {
+        width: 100%;
+        max-height: 280px;
+    }
+
+    .ficha-info {
+        width: 100%;
+    }
+
+    .ficha-info h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .ficha-producto .ficha-imagen {
+        width: 90%;
+        height: 250px;
+        max-height: 40vh;
+        margin: 0 auto;
+    }
+}
+
+/* =================================
+   CARRITO GENERAL
+================================= */
+
+.boton-carrito {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 900;
+    padding: 14px 24px;
+    background: #c20303;
+    color: #fff3dc;
+    border: 2px solid #d6a94e;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.boton-carrito:hover {
+    background: #024902;
+    transform: scale(1.04);
+}
+
+.panel-carrito {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    background: rgba(0, 0, 0, 0.75);
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.panel-carrito.activo {
+    display: flex;
+}
+
+.contenido-carrito {
+    position: relative;
+    width: min(500px, 95%);
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 30px;
+    background: #fff9ef;
+    border: 2px solid #d6a94e;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    color: #024902;
+}
+
+.contenido-carrito h2 {
+    color: #024902;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cerrar-carrito {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    border: none;
+    background: none;
+    color: #c20303;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #d6a94e;
+}
+
+.item-carrito p {
+    color: #263b27;
+}
+
+.item-carrito button {
+    padding: 7px 12px;
+    background: #d6a94e;
+    color: #063509;
+    border: 1px solid #b58a32;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.item-carrito button:hover {
+    background: #c20303;
+    color: white;
+}
+.vaciar-carrito,
+.enviar-pedido {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-top: 14px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.vaciar-carrito {
+    background: #c20303;
+}
+
+.enviar-pedido {
+    background: #024902;
+    transition: background 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .boton-carrito {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 18px;
+    }
+
+    .contenido-carrito {
+        padding: 25px 18px;
+    }
+}
+/* Carrito centrado en Nuestras figuras */
+.pagina-categorias .boton-carrito {
+    position: relative;
+    z-index: 20;
+    display: block;
+    width: fit-content;
+    margin: -250px auto 35px;
+    left: 55px;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    background: #c20303;
+    color: #fff9ef;
+    border: 2px solid #d6a94e;
+    border-radius: 30px;
+    padding: 18px 38px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.pagina-categorias .boton-carrito:hover {
+    background: #024902;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Recuperar el catálogo de figuras chicas */
+body.figuras-chicas .catalogo-figuras {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+body.figuras-chicas .catalogo-figuras .figura img {
+    display: block;
+    width: 85%;
+    height: 145px;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.ficha-producto {
+    align-items: flex-start;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.ficha-info {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Imágenes más grandes en las fichas de figuras chicas */
+.figuras-chicas .ficha-producto .ficha-imagen {
+    width: 60%;
+    height: 350px;
+    max-height: 55vh;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+@media (max-width: 650px) {
+    .figuras-chicas .ficha-producto .ficha-imagen {
+        width: 100%;
+        height: 300px;
+        max-height: 45vh;
+    }
+}
+
+
+/* =================================
+   CONTACTO - CREADORES DE FANTASÍAS
+   Nuevo diseño estilo catálogo
+================================= */
+
+/* Contenedor principal */
+
+.pagina-contacto .contacto {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 35px 25px 50px;
+}
+
+/* Título y frases */
+
+.pagina-contacto .encabezado-contacto {
+    text-align: center;
+    margin-bottom: 35px;
+    padding: 20px;
+    background: rgba(255, 249, 239, 0.82);
+    border: 1px solid #d6a94e;
+    border-radius: 20px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+}
+
+.pagina-contacto .encabezado-contacto h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 400;
+    color: #c90000;
+    margin: 0 0 18px;
+    text-shadow: 0 0 5px #f5d76e, 0 0 15px #d4a900;
+}
+
+.pagina-contacto .encabezado-contacto p {
+    color: #263b27;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin: 10px auto;
+}
+
+/* Fichas de contacto */
+
+.pagina-contacto .opciones-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin: 35px auto;
+}
+
+.pagina-contacto .tarjeta-contacto {
+    position: relative;
+    flex: 1 1 300px;
+    max-width: 430px;
+    padding: 35px 28px;
+    text-align: center;
+    background: linear-gradient(145deg, #fffaf1, #ead0ad);
+    border: 2px solid #c99b45;
+    border-radius: 22px;
+    box-shadow: 0 8px 22px rgba(35, 27, 12, 0.22);
+}
+
+.pagina-contacto .tarjeta-contacto h2 {
+    color: #075b24;
+    font-family: Georgia, serif;
+    font-size: 1.8rem;
+    margin: 0 0 20px;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.8);
+}
+
+.pagina-contacto .tarjeta-contacto p {
+    color: #39352f;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+/* Botones */
+
+.pagina-contacto .boton-contacto {
+    display: inline-block;
+    padding: 14px 25px;
+    background: #075b24;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #d6a94e;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    transition: transform 0.3s ease, background-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.pagina-contacto .boton-contacto:hover {
+    background: #a90000;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(204, 1, 1, 0.35);
+}
+
+/* Frase final */
+
+.pagina-contacto .mensaje-final {
+    display: table;
+    margin: 40px auto 10px;
+    padding: 15px 25px;
+    text-align: center;
+    color: #a90000;
+    background: rgba(255, 249, 239, 0.88);
+    border: 1px solid #d6a94e;
+    border-radius: 18px;
+    font-family: Georgia, serif;
+    font-size: 1.35rem;
+    line-height: 1.7;
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 650px) {
+   
+    .pagina-contacto .contacto {
+        padding: 25px 15px 35px;
+    }
+
+    .pagina-contacto .encabezado-contacto {
+        padding: 18px 14px;
+        margin-bottom: 25px;
+    }
+
+    .pagina-contacto .encabezado-contacto p {
+        font-size: 1.05rem;
+    }
+
+    .pagina-contacto .opciones-contacto {
+        gap: 22px;
+    }
+
+    .pagina-contacto .tarjeta-contacto {
+        flex-basis: 100%;
+        padding: 28px 20px;
+    }
+
+    .pagina-contacto .mensaje-final {
+        font-size: 1.1rem;
+        padding: 12px 18px;
+    }
+}
+
+/* Limpieza de restos del diseño anterior en Contacto */
+
+body.pagina-contacto::before {
+    content: none;
+    display: none;
+}
+
+.pagina-contacto .encabezado-contacto {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Contacto: quitar elementos duplicados */
+.pagina-contacto .mensaje-final {
+    display: none;
+}
+
+/* Eliminar adornos antiguos de la página */
+body.pagina-contacto::before,
+body.pagina-contacto::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Contacto: ocultar solamente el logo duplicado */
+body.pagina-contacto .menu .logo {
+    display: none;
+}
+
+/* Fondo de Contacto: ocupar toda la pantalla */
+body.pagina-contacto {
+    background-image: none !important;
+}
+
+.pagina-contacto .contacto {
+    position: relative;
+    max-width: none;
+    width: 100%;
+}
+
+.pagina-contacto .contacto {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pagina-contacto .fondo-navidad {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 125%;
+    object-fit: fill;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+/* Contenedor de Nuestras figuras */
+body.pagina-productos-sobres .marco-sobres {
+    position: relative;
+}
+
+/* Tarjetas de Nuestras figuras */
+body.pagina-productos-sobres .tarjetas-productos {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    position: absolute;
+    top: 37%;
+    left: 18%;
+    width: 74%;
+    gap: 28px;
+    z-index: 50;
+}
+
+body.pagina-productos-sobres .tarjetas-productos .tarjeta-contacto {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    padding: 30px 24px;
+    text-align: center;
+
+    background-color: #e9c5a1;
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,0.75) 1.5px, transparent 2.5px),
+        radial-gradient(circle, rgba(255,255,255,0.55) 2px, transparent 3px);
+    background-size: 30px 30px, 46px 46px;
+    background-position: 0 0, 15px 12px;
+
+    border: 1px solid #d87504;
+    border-radius: 24px;
+    box-shadow: 0 5px 18px rgba(75, 48, 12, 0.12);
+}
+
+body.pagina-productos-sobres .tarjetas-productos h2 {
+    color: #da0606;
+}
+
+body.pagina-productos-sobres .tarjetas-productos p {
+    color: #39352f;
+}
+
+/* Botones de las tarjetas de productos */
+body.pagina-productos-sobres .tarjetas-productos .boton-contacto {
+    display: inline-block;
+    padding: 14px 24px;
+    background-color: #075b24;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #d8ac73;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease,
+                background-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+body.pagina-productos-sobres .tarjetas-productos .boton-contacto:hover {
+    background-color: #a90000;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(204, 1, 1, 0.4);
+}
+
+/* Títulos de las páginas de figuras */
+body.figuras-grandes .titulo-nuestras-figuras,
+body.figuras-chicas .titulo-nuestras-figuras {
+    top: 110px !important;
+    z-index: 60;
+}
+
+/* Título de la página principal de categorías */
+body.pagina-categorias .titulo-nuestras-figuras {
+    top: 150px !important;
+    z-index: 60;
+}
+
+/* CONTACTO: menú sin zócalo */
+body.pagina-contacto header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+/* CONTACTO: bajar título y tarjetas */
+body.pagina-contacto .contacto {
+    padding-top: 90px;
+}
+
+/* CONTACTO: botones transparentes sobre el menú de la imagen */
+body.pagina-contacto .zona-menu-superior {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 30;
+    pointer-events: none;
+}
+
+body.pagina-contacto .zona-menu-superior a {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: block;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+body.pagina-contacto .zona-menu-superior a:nth-child(1) {
+    left: 62%;
+    width: 4%;
+}
+
+body.pagina-contacto .zona-menu-superior a:nth-child(2) {
+    left: 68.4%;
+    width: 9.5%;
+}
+
+body.pagina-contacto .zona-menu-superior a:nth-child(3) {
+    left: 80.5%;
+    width: 5.5%;
+}
+
+/* Ocultar el menú de texto: queda visible el de la imagen */
+body.pagina-contacto .menu .enlaces {
+    display: none;
+}
+
+/* CONTACTO: tarjetas con textura de nieve */
+body.pagina-contacto .opciones-contacto .tarjeta-contacto {
+    background-color: #e9c5a1;
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,0.75) 1.5px, transparent 2.5px),
+        radial-gradient(circle, rgba(255,255,255,0.55) 2px, transparent 3px);
+    background-size: 30px 30px, 46px 46px;
+    background-position: 0 0, 15px 12px;
+
+    border: 1px solid #d87504;
+    border-radius: 24px;
+    box-shadow: 0 5px 18px rgba(75, 48, 12, 0.12);
+}
+
+/* CONTACTO: botones rojos que cambian a verde */
+body.pagina-contacto .boton-contacto {
+    background-color: #a90000;
+    color: #ffffff;
+    border: 1px solid #d6a94e;
+}
+
+body.pagina-contacto .boton-contacto:hover {
+    background-color: #075b24;
+    color: #ffffff;
+    border-color: #d6a94e;
+}
+
+/* CONTACTO: ajustar altura y alinear botones */
+body.pagina-contacto .tarjeta-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.pagina-contacto .tarjeta-contacto h2 {
+    margin-top: 10px;
+}
+
+body.pagina-contacto .tarjeta-contacto .boton-contacto {
+    margin-top: auto;
+}
+
+/* CONTACTO: animación del título principal */
+body.pagina-contacto .encabezado-contacto h1 {
+    animation: brilloTitulo 4s ease-in-out infinite;
+}
+
+
+/* ==========================================
+   AJUSTES DE CELULAR - SEGUNDA CORRECCIÓN
+========================================== */
+
+@media (max-width: 700px) {
+
+    /* ---------- INICIO ---------- */
+
+    body.pagina-fondo-navidad .marco-pagina {
+        min-height: calc(100svh + 65px);
+    }
+
+    body.pagina-fondo-navidad .fondo-navidad1 {
+        width: 100%;
+        height: calc(100% + 65px);
+        object-fit: fill;
+        object-position: center top;
+    }
+
+    body.pagina-fondo-navidad .presentacion {
+        padding: 145px 5% 35px;
+        gap: 15px;
+    }
+
+    body.pagina-fondo-navidad .presentacion-texto {
+        padding-top: 0;
+    }
+
+    body.pagina-fondo-navidad .presentacion-texto h1 {
+        font-size: 2.8rem;
+        line-height: 1.15;
+        left: 0;
+        top: 0;
+        margin: 0 auto 12px;
+    }
+
+    body.pagina-fondo-navidad .presentacion-texto p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        margin: 0 auto 12px;
+    }
+
+    body.pagina-fondo-navidad .presentacion-imagen {
+        width: 100%;
+        max-width: 340px;
+        padding-top: 5px;
+    }
+
+    body.pagina-fondo-navidad .presentacion-imagen img {
+        width: 85%;
+        max-width: 320px;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        top: 0;
+        margin: 0 auto;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+
+    /* ---------- Nuestras figuras ---------- */
+
+    body.pagina-categorias .marco-sobres {
+        min-height: calc(100svh + 100px);
+    }
+
+    body.pagina-categorias .fondo-navidad {
+        width: 100%;
+        height: calc(100% + 100px);
+        object-fit: fill;
+        object-position: center top;
+    }
+
+    body.pagina-categorias .titulo-nuestras-figuras {
+        padding-top: 135px;
+    }
+
+    /* Volver a colocar las tarjetas una debajo de otra */
+    body.pagina-categorias .tarjetas-productos {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 76%;
+        margin: 38px auto 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        transform: none;
+    }
+
+    body.pagina-categorias .tarjetas-productos .tarjeta-contacto {
+        width: 100%;
+        padding: 15px 12px;
+    }
+
+
+    /* ---------- Figuras grandes y chicas ---------- */
+
+    body.figuras-grandes .marco-sobres,
+    body.figuras-chicas .marco-sobres {
+        min-height: calc(100svh + 100px);
+    }
+
+    body.figuras-grandes .fondo-navidad,
+    body.figuras-chicas .fondo-navidad {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% + 100px);
+        object-fit: fill;
+        object-position: center center;
+    }
+
+    /* Subir el título */
+    body.figuras-grandes .titulo-nuestras-figuras,
+    body.figuras-chicas .titulo-nuestras-figuras {
+        padding-top: 95px;
+    }
+
+    /* Tarjetas más cuadradas */
+    body.figuras-grandes .catalogo-figuras,
+    body.figuras-chicas .catalogo-figuras {
+        width: 92%;
+        margin: 25px auto 30px;
+        gap: 12px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    body.figuras-grandes .catalogo-figuras .figura,
+    body.figuras-chicas .catalogo-figuras .figura {
+        padding: 8px;
+        min-width: 0;
+        aspect-ratio: 1 / 1;
+    }
+
+    body.figuras-grandes .catalogo-figuras .figura img,
+    body.figuras-chicas .catalogo-figuras .figura img {
+        width: 100%;
+        height: 110px;
+        object-fit: contain;
+    }
+
+
+    /* ---------- Contactos ---------- */
+
+    body.pagina-contacto .marco-sobres {
+        min-height: calc(100svh + 65px);
+    }
+
+    body.pagina-contacto .fondo-navidad {
+        width: 100%;
+        height: calc(100% + 65px);
+        object-fit: fill;
+        object-position: center top;
+    }
+
+    body.pagina-contacto .contacto {
+        padding-top: 115px;
+    }
+
+    /* Título más pequeño; la frase conserva su tamaño */
+    body.pagina-contacto .encabezado-contacto h1 {
+        font-size: 2.1rem;
+        line-height: 1.2;
+    }
+
+    /* Tarjetas más compactas */
+    body.pagina-contacto .opciones-contacto {
+        gap: 12px;
+        margin-top: 18px;
+    }
+
+    body.pagina-contacto .tarjeta-contacto {
+        padding: 12px 14px;
+    }
+
+    body.pagina-contacto .tarjeta-contacto h2 {
+        font-size: 1.25rem;
+        margin-bottom: 7px;
+    }
+
+    body.pagina-contacto .tarjeta-contacto p {
+        margin-bottom: 9px;
+    }
+
+
+    /* ---------- BOTONES DE NAVEGACIÓN ---------- */
+
+    /* Tres botones horizontales, centrados y uno debajo del otro */
+
+    body.pagina-fondo-navidad .zona-menu-superior,
+    body.pagina-productos-sobres .zona-menu-superior,
+    body.pagina-contacto .zona-menu-superior {
+        position: absolute;
+        top: 12px;
+        left: 15%;
+        width: 70%;
+        height: 95px;
+        z-index: 100;
+        pointer-events: none;
+    }
+
+    body.pagina-fondo-navidad .zona-menu-superior a,
+    body.pagina-productos-sobres .zona-menu-superior a,
+    body.pagina-contacto .zona-menu-superior a {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 28px;
+        display: block;
+        pointer-events: auto;
+        background: rgba(255, 0, 0, 0.35);
+        outline: 1px solid red;
+    }
+
+    /* Inicio */
+    body.pagina-fondo-navidad .zona-menu-superior a:nth-child(1),
+    body.pagina-productos-sobres .zona-menu-superior a:nth-child(1),
+    body.pagina-contacto .zona-menu-superior a:nth-child(1) {
+        top: 0;
+    }
+
+    /* Nuestras figuras */
+    body.pagina-fondo-navidad .zona-menu-superior a:nth-child(2),
+    body.pagina-productos-sobres .zona-menu-superior a:nth-child(2),
+    body.pagina-contacto .zona-menu-superior a:nth-child(2) {
+        top: 32px;
+    }
+
+    /* Contactos */
+    body.pagina-fondo-navidad .zona-menu-superior a:nth-child(3),
+    body.pagina-productos-sobres .zona-menu-superior a:nth-child(3),
+    body.pagina-contacto .zona-menu-superior a:nth-child(3) {
+        top: 64px;
+    }
+
+}
+
+
+/* ==========================================
+   NUEVA CORRECCIÓN DE CELULAR
+   ========================================== */
+
+@media (max-width: 700px) {
+
+        body.pagina-fondo-navidad .zona-menu-superior {
+            top: 110px !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 75px !important;
+        }
+
+        body.pagina-fondo-navidad .zona-menu-superior a {
+            left: 22% !important;
+            width: 56% !important;
+            height: 20px !important;
+        }
+
+        body.pagina-fondo-navidad .zona-menu-superior a:nth-child(1) {
+            top: 0 !important;
+        }
+
+        body.pagina-fondo-navidad .zona-menu-superior a:nth-child(2) {
+            top: 27px !important;
+        }
+
+        body.pagina-fondo-navidad .zona-menu-superior a:nth-child(3) {
+            top: 54px !important;
+        }
+
+    /* INICIO - AJUSTES DE CELULAR */
+
+body.pagina-fondo-navidad .presentacion {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding: 145px 5% 30px !important;
+    gap: 8px !important;
+}
+
+body.pagina-inicio.pagina-fondo-navidad .presentacion-texto {
+    width: 100% !important;
+    flex: none !important;
+    padding: 0 !important;
+    margin: 15px 0 0 !important;
+    position: relative !important;
+    top: 0 !important;
+}
+
+body.pagina-fondo-navidad .presentacion-texto h1 {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    font-size: 2.2rem !important;
+    line-height: 1.1 !important;
+    margin: 0 auto 5px !important;
+    text-align: center !important;
+}
+
+body.pagina-inicio.pagina-fondo-navidad .presentacion-texto p {
+    margin-top: 8px !important;
+    margin-bottom: 12px !important;
+    transform: translateY(12px) !important;
+}
+
+body.pagina-inicio.pagina-fondo-navidad .presentacion-imagen {
+    margin-top: 2px !important;
+}
+
+body.pagina-inicio.pagina-fondo-navidad .presentacion-imagen img {
+    width: 70% !important;
+    max-width: 240px !important;
+}
+
+
+/* INICIO - BAJAR PRESENTACIÓN */
+    
+/* =====================================
+   INICIO - CORRECCIÓN DEFINITIVA CELULAR
+===================================== */
+
+body.pagina-inicio.pagina-fondo-navidad .presentacion {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding: 260px 5% 30px !important;
+    gap: 12px !important;
+}
+
+body.pagina-inicio.pagina-fondo-navidad .presentacion-texto {
+    width: 100% !important;
+    flex: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    position: relative !important;
+}
+
+body.pagina-inicio.pagina-fondo-navidad .presentacion-texto h1 {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    font-size: 2.2rem !important;
+    line-height: 1.1 !important;
+    margin: 0 auto 12px !important;
+    text-align: center !important;
+}
+
+body.pagina-inicio.pagina-fondo-navidad .presentacion-texto p {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 500px !important;
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+    margin: 0 auto 12px !important;
+    text-align: center !important;
+}
+
+body.pagina-inicio.pagina-fondo-navidad .presentacion-imagen {
+    width: 100% !important;
+    flex: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+}
+
+body.pagina-inicio.pagina-fondo-navidad .presentacion-imagen img {
+    width: 60% !important;
+    max-width: 190px !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    top: 0 !important;
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+
+    /* NUESTRAS FIGURAS: SUBIR TÍTULO Y TARJETAS */
+    body.pagina-categorias .titulo-nuestras-figuras {
+        top: 105px !important;
+        font-size: 25px !important;
+    }
+
+    body.pagina-categorias .tarjetas-productos {
+        top: 28% !important;
+        transform: none !important;
+        gap: 15px !important;
+    }
+
+
+    /* FIGURAS GRANDES Y CHICAS: ACHICAR TÍTULO Y TARJETAS */
+    body.figuras-grandes .titulo-nuestras-figuras,
+    body.figuras-chicas .titulo-nuestras-figuras {
+        top: 90px !important;
+        font-size: 24px !important;
+    }
+
+    body.figuras-grandes .catalogo-figuras,
+    body.figuras-chicas .catalogo-figuras {
+        left: 7% !important;
+        width: 86% !important;
+        gap: 10px !important;
+    }
+
+    body.figuras-grandes .catalogo-figuras .figura,
+    body.figuras-chicas .catalogo-figuras .figura {
+        padding: 7px !important;
+    }
+
+    body.figuras-grandes .catalogo-figuras .figura img,
+    body.figuras-chicas .catalogo-figuras .figura img {
+        height: 115px !important;
+    }
+
+
+    /* CONTACTOS: TARJETAS MÁS COMPACTAS */
+    body.pagina-contacto .opciones-contacto {
+        width: 88% !important;
+        margin: 18px auto !important;
+        gap: 14px !important;
+    }
+
+    body.pagina-contacto .tarjeta-contacto {
+        flex-basis: 100% !important;
+        padding: 16px 14px !important;
+    }
+
+    body.pagina-contacto .tarjeta-contacto h2 {
+        font-size: 1.3rem !important;
+        margin-bottom: 8px !important;
+    }
+
+    body.pagina-contacto .tarjeta-contacto p {
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 12px !important;
+    }
+
+    body.pagina-contacto .boton-contacto {
+        padding: 9px 16px !important;
+        font-size: 0.85rem !important;
+    }
+}
+
+
+/* ==========================================
+   INICIO - AJUSTE FINAL DE CELULAR
+========================================== */
+
+@media (max-width: 700px) {
+
+    /* Bajamos toda la presentación */
+    body.pagina-inicio.pagina-fondo-navidad .presentacion {
+        padding-top: 285px !important;
+        gap: 20px !important;
+    }
+
+    /* Bajamos un poquito más las frases */
+    body.pagina-inicio.pagina-fondo-navidad .presentacion-texto {
+        margin-top: 15px !important;
+        transform: translateY(20px) !important;
+    }
+
+    body.pagina-inicio.pagina-fondo-navidad .presentacion-texto p {
+        transform: translateY(18px) !important;
+        margin-bottom: 18px !important;
+    }
+
+    /* Agrandamos un poquito la imagen */
+    body.pagina-inicio.pagina-fondo-navidad .presentacion-imagen {
+        width: 100% !important;
+        margin-top: 12px !important;
+    }
+
+    body.pagina-inicio.pagina-fondo-navidad .presentacion-imagen img {
+        width: 82% !important;
+        max-width: 280px !important;
+        height: auto !important;
+        top: 0 !important;
+    }
+
+    /* Separamos los botones transparentes */
+    body.pagina-inicio.pagina-fondo-navidad .zona-menu-superior a:nth-child(1) {
+        top: -2 !important;
+    }
+
+    body.pagina-inicio.pagina-fondo-navidad .zona-menu-superior a:nth-child(2) {
+        top: 35px !important;
+    }
+
+    body.pagina-inicio.pagina-fondo-navidad .zona-menu-superior a:nth-child(3) {
+        top: 70px !important;
+    }
+}
+
+
+/* ==========================================
+   INICIO - CELULAR (v2): SUBIR PRESENTACIÓN,
+   BAJAR Y ENSANCHAR ÚLTIMOS DOS BOTONES
+========================================== */
+
+@media (max-width: 700px) {
+
+    /* Subimos título, frases e imagen (antes 285px) */
+    html body.pagina-inicio.pagina-fondo-navidad main .presentacion {
+        padding-top: 200px !important;
+    }
+
+    /* Botón "Nuestras figuras": más abajo y más ancho */
+    html body.pagina-inicio.pagina-fondo-navidad .zona-menu-superior a:nth-child(2) {
+        top: 45px !important;
+        left: 12% !important;
+        width: 76% !important;
+        height: 26px !important;
+    }
+
+    /* Botón "Contacto": más abajo y más ancho */
+    html body.pagina-inicio.pagina-fondo-navidad .zona-menu-superior a:nth-child(3) {
+        top: 90px !important;
+        left: 12% !important;
+        width: 76% !important;
+        height: 26px !important;
+    }
+}
+
+
+/* ==========================================
+   INICIO - CELULAR (v4): ALINEAR MENÚ
+   Y BAJAR PRESENTACIÓN SIN CAMBIAR COMPUTADORA
+========================================== */
+
+@media (max-width: 700px) {
+    html body.pagina-inicio.pagina-fondo-navidad main .presentacion {
+        padding-top: 235px !important;
+        gap: 12px !important;
+    }
+
+    html body.pagina-inicio.pagina-fondo-navidad .presentacion-texto {
+        transform: none !important;
+        margin-top: 0 !important;
+    }
+
+    html body.pagina-inicio.pagina-fondo-navidad .presentacion-texto p {
+        transform: translateY(5px) !important;
+    }
+
+    html body.pagina-inicio.pagina-fondo-navidad .presentacion-imagen {
+        margin-top: 0 !important;
+    }
+
+    html body.pagina-inicio.pagina-fondo-navidad .presentacion-imagen img {
+        width: 65% !important;
+        max-width: 220px !important;
+    }
+
+    html body.pagina-inicio.pagina-fondo-navidad .zona-menu-superior a:nth-child(n) {
+        left: 27% !important;
+        width: 46% !important;
+    }
+
+    html body.pagina-inicio.pagina-fondo-navidad .zona-menu-superior a:nth-child(2) {
+        top: 35px !important;
+    }
+
+    html body.pagina-inicio.pagina-fondo-navidad .zona-menu-superior a:nth-child(3) {
+        top: 85px !important;
+    }
+}
+
+/* ==========================================
+   AJUSTES CELULAR: CONTACTO Y PRODUCTOS
+   ========================================== */
+
+@media (max-width: 700px) {
+
+    /* CONTACTO: Subir 2px el botón Inicio */
+    body.pagina-contacto .zona-menu-superior a:nth-child(1) {
+        top: -2px !important;
+    }
+
+    /* PRODUCTOS: Fondo completo de pantalla */
+    body.pagina-productos-sobres.pagina-categorias .marco-sobres {
+        min-height: 100svh !important;
+        position: relative !important;
+    }
+
+    body.pagina-productos-sobres.pagina-categorias .fondo-navidad {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: fill !important;
+        object-position: center top !important;
+    }
+
+    /* PRODUCTOS: Menú centrado sobre los botones de madera */
+    html body.pagina-productos-sobres .zona-menu-superior {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 180px !important;
+        transform: none !important;
+    }
+
+    html body.pagina-productos-sobres .zona-menu-superior a:nth-child(n) {
+        position: absolute !important;
+        left: 26% !important;
+        width: 48% !important;
+        height: 25px !important;
+        right: auto !important;
+    }
+
+    html body.pagina-productos-sobres .zona-menu-superior a:nth-child(1) { top: 78px !important; }
+    html body.pagina-productos-sobres .zona-menu-superior a:nth-child(2) { top: 114px !important; }
+    html body.pagina-productos-sobres .zona-menu-superior a:nth-child(3) { top: 147px !important; }
+
+    /* PRODUCTOS: Título centrado y visible */
+    html body.pagina-productos-sobres.pagina-categorias .titulo-nuestras-figuras {
+        position: absolute !important;
+        top: 188px !important;
+        padding-top: 0 !important;
+        margin: 0 !important;
+        font-size: 1.9rem !important;
+        line-height: 1.1 !important;
+        z-index: 20 !important;
+        text-align: center !important;
+        width: 100% !important;
+        left: 0 !important;
+    }
+
+    /* PRODUCTOS: Tarjetas bajadas con espacio prolijo */
+    html body.pagina-productos-sobres.pagina-categorias .tarjetas-productos {
+        position: absolute !important;
+        top: 238px !important;
+        left: 11% !important;
+        width: 78% !important;
+        margin: 0 !important;
+        transform: none !important;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+        z-index: 15 !important;
+    }
+
+    html body.pagina-productos-sobres.pagina-categorias .tarjetas-productos .tarjeta-contacto {
+        padding: 9px 12px !important;
+        min-height: 0 !important;
+    }
+
+    html body.pagina-productos-sobres.pagina-categorias .tarjetas-productos h2 {
+        font-size: 1.25rem !important;
+        margin: 0 0 3px !important;
+    }
+
+    html body.pagina-productos-sobres.pagina-categorias .tarjetas-productos p {
+        font-size: 0.85rem !important;
+        line-height: 1.35 !important;
+        margin: 0 0 7px !important;
+    }
+
+    html body.pagina-productos-sobres.pagina-categorias .tarjetas-productos .boton-contacto {
+        padding: 6px 14px !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* PRODUCTOS: Botón carrito achicado y centrado */
+    html body.pagina-categorias .boton-carrito {
+        position: absolute !important;
+        top: 524px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        margin: 0 !important;
+        padding: 7px 18px !important;
+        font-size: 0.9rem !important;
+        z-index: 25 !important;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3) !important;
+    }
+}
